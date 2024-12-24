@@ -3,15 +3,15 @@ import Decision from "./Decision"
 
 function App() {
     /**
-     * Challenge:
-     * Pass a function down via props to Decision that receives
-     * the boolean in state and logs it
+     * Challenge: figure out what to do with `render`
      */
     return (
         <div>
-            <Decision name={
+            <Decision render={
                 (goingOut) => {
-                    console.log(goingOut ? "I AM going out" : "I'm staying in");
+                    return (
+                        <h1>Are we going out tonight?? {goingOut ? "Yes!" : "Nope..."}</h1>
+                    )
                 }} />
         </div>
     )
