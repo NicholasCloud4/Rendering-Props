@@ -1,9 +1,7 @@
 import React from "react"
 
-export default function Decision({ render }) {
+export default function Decision({ children }) {
     const [goingOut, setGoingOut] = React.useState(false)
-
-    console.log(render(goingOut));
 
     function toggleGoingOut() {
         setGoingOut(prev => !prev)
@@ -12,7 +10,7 @@ export default function Decision({ render }) {
     return (
         <div>
             <button onClick={toggleGoingOut}>Change mind</button>
-            {render(goingOut)}
+            {children(goingOut)}
         </div>
     )
 }

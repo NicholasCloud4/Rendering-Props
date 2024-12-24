@@ -7,12 +7,13 @@ function App() {
      */
     return (
         <div>
-            <Decision render={
-                (goingOut) => {
+            <Decision>
+                {(goingOut) => {
                     return (
                         <h1>Are we going out tonight?? {goingOut ? "Yes!" : "Nope..."}</h1>
                     )
-                }} />
+                }}
+            </Decision>
         </div>
     )
 }
